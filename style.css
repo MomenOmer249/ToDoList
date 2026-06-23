@@ -1,5 +1,12 @@
+:root {
+    --bg-color: #e5e7eb;
+    --shadow-color: #9b9c9d;
+    --font-color: #1f2937;
+}
+
+
 body {
-    background-color: #e5e7eb;
+    background-color: #e2e2e2;
 }
 
 
@@ -11,13 +18,13 @@ div.header {
     margin: 0 auto;
     justify-content: space-between;
     align-items: center; 
-    background-color: #e5e7eb;
+    background-color: var(--bg-color);
     border-radius: 15px;
-    box-shadow: 0px 0px 15px 0px #9b9c9d;
+    box-shadow: 0px 0px 15px 0px var(--shadow-color);
 
     h1 {
         cursor: pointer;
-        color: #1f2937;
+        color: var(--font-color);
         padding-left: 30px;
         padding-right: 30px;
         font-size: 2rem;
@@ -27,33 +34,70 @@ div.header {
 }
 
 
-div.type {
-    height: 100%;
-    width: 10%;
-    align-items: right;
-    background-color: #e5e7eb;
-    box-shadow: 0px 0px 15px 0px #9b9c9d;
+.type {
+    width: clamp(150px, 20vw, 300px);
+    margin-left: 1.5%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.type-container {
+    display: flex;
+    flex-direction: column; 
+    box-shadow: 0px 0px 15px 0px var(--shadow-color);
     border-radius: 15px;
+    background-color: var(--bg-color);
+    overflow: hidden;
+    width: 100%;
+    
+}
+
+.work,
+.personal,
+.other {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    cursor: pointer;
     
 
-    div.work {
-        font-size: 2rem;
-        justify-content: space-between;
-        align-items: center;
-        display: flex;
-        p {
-            margin-right: 3rem;
-            font-size: 1.5rem;
-            color: #1f2937;
-            
-        }
-        div {
-            margin-left: 1rem;
-            width: 1.5rem;
-            height: 1.5rem;
-            border-radius: 100%;
-            background-color: #63b6d6;
-        }
-    }
+}
 
+.work,
+.personal {
+    border-bottom: 1px solid var(--shadow-color);
+}
+
+.personal .icon {
+    width: 15%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #9fdbde;
+}
+
+.work .icon {
+    width: 15%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #e88470;
+}
+
+.other .icon {
+    width: 15%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #7e7e7e;
+}
+
+.work p,
+.personal p,
+.other p {
+    font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+}
+
+.work:hover,
+.personal:hover,
+.other:hover {
+    background-color: #e1e1e1;
 }
