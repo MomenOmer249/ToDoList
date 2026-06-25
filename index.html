@@ -6,6 +6,13 @@
     <title>ToDoList</title>
     <link rel="stylesheet" href="style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!--Nunito Font-->
+
+
+
 </head>
 <body>
 
@@ -18,28 +25,23 @@
 
  </section>
 
- <section class="type">
-    <div class="type-container">
-        <div class="work">
-            <div class="icon"></div>
-            <p>Work</p>
+ <section class="board">
+    <div class="board">
+        <div class="card">
+            <h3 contenteditable="true" data-placeholder="Enter card title..." class="card-title">Card Title</h3>
+            <p contenteditable="true" data-placeholder="Enter card description..." class="card-desc">I have to go to the gym 5 times a week and split those days for every body part such 
+                as back and legs and chest and so on.</p>
+            <div class="card-footer">
+                 <input type="checkbox" class="card-check">                
+                 <span class="card-date">10/6/2026</span>
+            </div>
         </div>
 
-        <div class="personal">
-            <div class="icon"></div>
-            <p>Personal</p>
-        </div>
 
-        <div class="other">
-            <div class="icon"></div>
-            <p>Other</p>
-        </div>
     </div>
-</section>
+    
+ </section>
 
-<section class="board">
-
-</section>
 
 </body>
 </html>
