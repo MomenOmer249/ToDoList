@@ -80,6 +80,7 @@ div.card {
         width: 95%;
         margin: 0 auto;
         margin-top: 20px;
+        margin-bottom: ;
         font-family: 'bold', sans-serif;
         font-size: clamp(0.8rem, 1.4vw, 3rem);
         font-weight: 400;
@@ -127,7 +128,7 @@ div.card {
 
     .card-date {
         font-family: 'bold', sans-serif;
-        font-size: clamp(0.8rem, 1.2vw, 3rem);
+        font-size: clamp(0.5rem, 0.8vw, 2rem);
         font-weight: 1400;
 
     }
