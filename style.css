@@ -80,9 +80,9 @@ div.card {
         width: 95%;
         margin: 0 auto;
         margin-top: 20px;
-        margin-bottom: ;
+        margin-bottom: 20px;
         font-family: 'bold', sans-serif;
-        font-size: clamp(0.8rem, 1.4vw, 3rem);
+        font-size: clamp(0.7rem, 1vw, 2rem);
         font-weight: 400;
 
     }
