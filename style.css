@@ -60,7 +60,8 @@ div.card {
     width: 47%;
     max-height: 10%;
     border: 2px solid #8bc9ff;
-    margin-left: 2%;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 15px;
     margin-top: 20px;
     display: flex;
