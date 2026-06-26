@@ -56,7 +56,7 @@ div.board {
 
 }
 
-div.card {
+.card {
     width: 46%;
     max-height: 10%;
     border: 2px solid #8bc9ff;
@@ -67,10 +67,11 @@ div.card {
     display: flex;
     flex-direction: column;
     
+    
     h3 {
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
-        margin-top: 10px;
+        margin-top: 15px;
         font-family: bold, sans-serif;
         font-size: clamp(1rem, 2vw, 4rem);
         font-weight: 400;
@@ -85,7 +86,12 @@ div.card {
         font-family: 'bold', sans-serif;
         font-size: clamp(0.7rem, 1vw, 2rem);
         font-weight: 400;
+        
+    }
 
+    .completed {
+        text-decoration: line-through;
+        color: gray;
     }
 
 
@@ -98,10 +104,18 @@ div.card {
     [contenteditable="true"]:empty::before {
      content: attr(data-placeholder);
         color: gray;
+        text-decoration: none;
     }   
     
     
 }
+
+.card.completed {
+    background-color: #ced4da;
+    color: #777;
+    border-color: #8bc9ff;
+}
+
 
 .card-title {
     display: -webkit-box;
@@ -116,6 +130,7 @@ div.card {
   line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  padding: auto;
 }
 
 .card-footer {
@@ -131,6 +146,7 @@ div.card {
         font-family: 'bold', sans-serif;
         font-size: clamp(0.5rem, 0.8vw, 2rem);
         font-weight: 1400;
+        color: gray;
 
     }
 
@@ -141,7 +157,31 @@ div.card {
     }
 }
 
+.card-header {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+
+}
+
+.card-check {
+    background-color: rgb(139, 79, 0);
+}
+
 [contenteditable="true"]:not(:focus):empty::before {
     content: attr(data-placeholder);
     color: gray;
+}
+
+.card-remove {
+    cursor: pointer;
+    color: gray;
+    margin-top: auto;
+    margin-right: auto;
+    .material-symbols-outlined{
+     font-size: clamp(1rem, 1.4vw, 2rem);   
+    }
+    
 }

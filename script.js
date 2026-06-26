@@ -33,14 +33,13 @@ desc.addEventListener('beforeinput', (e) => {
 });
 
 const addBtn = document.getElementById('addBtn');
-const board = document.querySelector('div.board');
 const templateCard = document.querySelector('.card');
+const board = document.querySelector('div.board');
 
-// Add new card
 addBtn.addEventListener('click', () => {
     const newCard = templateCard.cloneNode(true);
 
-    // Clear contents
+
     newCard.querySelector('.card-title').textContent = '';
     newCard.querySelector('.card-desc').textContent = '';
     newCard.querySelector('.card-check').checked = false;
@@ -52,10 +51,12 @@ addBtn.addEventListener('click', () => {
     board.appendChild(newCard);
 });
 
-// Delete card when checkbox is checked
-board.addEventListener('change', (e) => {
-    if (e.target.classList.contains('card-check') && e.target.checked) {
-        e.target.closest('.card').remove();
+
+board.addEventListener('click', (e) => {
+    const rmvBtn = e.target.closest('.material-symbols-outlined');
+
+    if (rmvBtn) {
+        rmvBtn.closest('.card').remove();
     }
 });
 
@@ -65,5 +66,26 @@ document.addEventListener('input', (e) => {
         if (e.target.textContent.trim() === '') {
             e.target.innerHTML = '';
         }
+    }
+});
+
+
+board.addEventListener('change', (e) => {
+    const card = e.target.closest('.card');
+    if (e.target.classList.contains('card-check') && e.target.checked) {
+        card.querySelector('.card-title').classList.add('completed');
+        card.querySelector('.card-desc').classList.add('completed');
+    } else {
+        card.querySelector('.card-title').classList.remove('completed');
+        card.querySelector('.card-desc').classList.remove('completed');
+    }
+
+})
+
+
+board.addEventListener('change', (e) => {
+    if (e.target.classList.contains('card-check')) {
+        const card = e.target.closest('.card');
+        card.classList.toggle('completed', e.target.checked);
     }
 });
